@@ -58,7 +58,7 @@ def build_similarity_matrix(sentences, stop_words):
     return similarity_matrix
 
 
-def generate_summary(file_name, top_n=5):
+def summarize(file_name, top_n=5):
     nltk.download("stopwords")
     stop_words = stopwords.words('english')
     summarize_text = []
@@ -84,4 +84,4 @@ def generate_summary(file_name, top_n=5):
     print("Summarize Text: \n", ". ".join(summarize_text))
 
 # let's begin
-generate_summary( "msft.txt", 2)
+summarize( "msft.txt", 2)
